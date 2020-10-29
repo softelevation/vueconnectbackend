@@ -11,6 +11,7 @@ exports.getPics = async (req, res) => {
                                     responseType: 'stream'});
         fileRes.data.pipe(res);
     }catch(e){
+        console.log("error",e);
         res.send(e);
     }
 }
